@@ -1,0 +1,1250 @@
+{
+	"info": {
+		"_postman_id": "c68a3597-c4a9-4531-81f9-2e0d13670b61",
+		"name": "Cao Chí Sang_Node33_Capstone_AirBnB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21820401"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Hải",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "haih@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "098098",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "15/6/2000",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "User",
+							"type": "text"
+						},
+						{
+							"key": "anh_dai_dien",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/Rose.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"haih@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NTg3NiwiZXhwIjoxNjk4NjAzMDc2fQ.cMOYypFMz7VEA-Op4kPMt7UvweV8dZ3ZyF1xpdlBacM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/post/6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nguoi_dung_id\": 6,\r\n  \"phong_id\": 12,\r\n  \"ngay_binh_luan\": \"2023-10-29T16:13:03.108Z\",\r\n  \"noi_dung\": \"Khách sạn phục vụ tốt\",\r\n  \"sao_binh_luan\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment/post/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"post",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/update/8",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"binh_luan_id\": 8,\r\n  \"nguoi_dung_id\": 6,\r\n  \"phong_id\": 12,\r\n  \"ngay_binh_luan\": \"2023-10-29T16:14:54.881Z\",\r\n  \"noi_dung\": \"Khách sạn phục vụ tốt\",\r\n  \"sao_binh_luan\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment/update/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"update",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/byUserId/6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/byUserId/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"byUserId",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/comment/delete/8",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/comment/delete/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"delete",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/room",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room/bookroom",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nguoi_dung_id\": 6,\r\n  \"phong_id\": 12,\r\n  \"ngay_den\": \"2023-10-29T16:22:52.878Z\",\r\n  \"ngay_di\": \"2023-10-29T16:22:52.878Z\",\r\n  \"so_luong_khach\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/bookroom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"bookroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room/bookroom/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/room/bookroom/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"bookroom",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room/book-room/6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/room/book-room/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"book-room",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room/update-book-room/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dat_phong_id\": 1,\r\n  \"nguoi_dung_id\": 6,\r\n  \"phong_id\": 12,\r\n  \"ngay_den\": \"2023-10-29T16:26:12.743Z\",\r\n  \"ngay_di\": \"2023-10-29T16:26:12.743Z\",\r\n  \"so_luong_khach\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/update-book-room/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"update-book-room",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room/delete-room/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/room/delete-room/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"delete-room",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/pagination/1/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/pagination/1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"pagination",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/search/sang",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/search/sang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"search",
+						"sang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nguoi_dung_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "caosang",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "caosang@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "009880",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "13/02/1997",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "anh_dai_dien",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/Rose.jpg"
+						},
+						{
+							"key": "gender",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODU5NjAxNywiZXhwIjoxNjk4NjAzMjE3fQ.D1-m06VvYvV9Zgdh95Xa5e9_1ynWQyNI673lmGQRcfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/roomdetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail/location/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/roomdetail/location/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail",
+						"location",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/roomdetail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail/pagination/2/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/roomdetail/pagination/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail",
+						"pagination",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ten_phong",
+							"value": "Hilton Đà Nẵng",
+							"type": "text"
+						},
+						{
+							"key": "khach",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "phong_ngu",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "giuong",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "phong_tam",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "mo_ta",
+							"value": "At Guest Reservations, we're focused on connecting travelers to the most relevant deals possible.",
+							"type": "text"
+						},
+						{
+							"key": "gia_tien",
+							"value": "8000000",
+							"type": "text"
+						},
+						{
+							"key": "may_giat",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "ban_la",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "tivi",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "dieu_hoa",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "wifi",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "bep",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "do_xe",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "ho_boi",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "ban_ui",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "vi_tri_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/nha-hang-the-sail-khach-san-hilton-danang-fantasticity-1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/roomdetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail/28",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phong_id",
+							"value": "28",
+							"type": "text"
+						},
+						{
+							"key": "ten_phong",
+							"value": "Hilton Đà Nẵng",
+							"type": "text"
+						},
+						{
+							"key": "khach",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "phong_ngu",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "giuong",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "phong_tam",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "mo_ta",
+							"value": "At Guest Reservations, we're focused on connecting travelers to the most relevant deals possible.",
+							"type": "text"
+						},
+						{
+							"key": "gia_tien",
+							"value": "8000000",
+							"type": "text"
+						},
+						{
+							"key": "may_giat",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "ban_la",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "tivi",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "dieu_hoa",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "wifi",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "bep",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "do_xe",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "ho_boi",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "ban_ui",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "vi_tri_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/nha-hang-the-sail-khach-san-hilton-danang-fantasticity-1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/roomdetail/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/roomdetail/delete/room/28",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/roomdetail/delete/room/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roomdetail",
+						"delete",
+						"room",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location/7",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/location/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location/pagination/2/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/location/pagination/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"pagination",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ten_vi_tri",
+							"value": "Biên Hòa",
+							"type": "text"
+						},
+						{
+							"key": "tinh_thanh",
+							"value": "Đồng Nai",
+							"type": "text"
+						},
+						{
+							"key": "quoc_gia",
+							"value": "Việt Nam",
+							"type": "text"
+						},
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/DN.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location/hinhanh/12",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinh_anh",
+							"type": "file",
+							"src": "/C:/Users/caoch/OneDrive/Máy tính/giang-dien-waterfall-in-dong-nai-vietnam_01.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/location/hinhanh/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"hinhanh",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location/12",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"vi_tri_id\": 12,\r\n  \"ten_vi_tri\": \"Long Khánh\",\r\n  \"tinh_thanh\": \"Biên Hòa\",\r\n  \"quoc_gia\": \"Việt Nam\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/location/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/location/12",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjYsIm5hbWUiOiJI4bqjaSIsImVtYWlsIjoiaGFpaEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJwaG9uZSI6IjA5ODA5OCIsImJpcnRoZGF5IjoiMTUvNi8yMDAwIiwiZ2VuZGVyIjoidHJ1ZSIsInJvbGUiOm51bGwsImFuaF9kYWlfZGllbiI6ImxvY2FsaG9zdDo4MDgwL3B1YmxpYy9pbWFnZS8xNjk4NTk1NjQ1MDYxX1Jvc2UuanBnIn0sImlhdCI6MTY5ODYzMzk3MCwiZXhwIjoxNjk4NjQxMTcwfQ.GGIJlouS3ATFkM-S1NGVV9bpFtoKbIK7MWexUID37M8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/location/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
